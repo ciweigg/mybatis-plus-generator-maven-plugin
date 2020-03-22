@@ -16,7 +16,7 @@
             <plugin>
                 <groupId>com.github.ciweigg</groupId>
                 <artifactId>mybatis-plus-generator-maven-plugin</artifactId>
-                <version>1.0.0</version>
+                <version>1.0.1-RELEASE</version>
                 <configuration>
                     <configurationFile>${basedir}/src/main/resources/generator/mp-code-generator-config.yaml
                     </configurationFile>
