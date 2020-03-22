@@ -11,8 +11,8 @@ public class MpCodeGeneratorConfig {
     private PackageConfig packageConfig;
     private StrategyConfig strategyConfig;
     private TemplateConfig templateConfig;
-    private boolean usebtl;
-    private boolean usevm;
-    private boolean useftl;
+    private boolean usebtl = false;
+    private boolean usevm = false;
+    private boolean useftl = false;
 
 }

@@ -12,6 +12,9 @@ import org.yaml.snakeyaml.introspector.BeanAccess;
 import java.io.FileInputStream;
 import java.io.InputStream;
 
+/**
+ * 本地开发测试
+ */
 public class MpCodeGenerator {
 
 	private static final String DEFAULT_PATH = "mp-code-generator-config.yaml";

@@ -53,18 +53,18 @@ packageConfig:
     mapper_path: ./src/main/java/com/una/product/mybatis/mapper
     xml_path: ./src/main/resources/mapper
     controller_path: ./src/main/java/com/una/product/controller
-# 自定义模板配置 如果不需要生成的类 就不设置路径 如果要使用默认的路径那么注释掉这边需要生成的类型
+# 是否生成下面文件 放开不生成 注释默认生成
 templateConfig:
 #  entity:
 #  service:
 #  serviceImpl:
 #  mapper:
 #  xml:
-#  controller: /templates/controller.java
-# 默认使用vm 需要哪个开启哪个 都不设置默认vm
-useftl: true
+#  controller:
+# 默认使用vm 需要哪个开启哪个 都不设置默认vm 建议使用vm 可以控制controller service model等是否生成
+#useftl: true
 #usebtl: true
-#usevm: true
+usevm: true
 strategyConfig:
   # 数据库表映射到实体的命名策略
   naming: underline_to_camel
