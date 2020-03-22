@@ -21,7 +21,7 @@ globalConfig:
   fileOverride: true
 dataSourceConfig:
   # 数据库连接地址
-  url: jdbc:mysql://127.0.0.1:3309/demo?useUnicode=true&useSSL=false&characterEncoding=utf8
+  url: jdbc:mysql://127.0.0.1:3309/bl2?useUnicode=true&useSSL=false&characterEncoding=utf8
   # 数据库驱动
   driverName: com.mysql.jdbc.Driver
   # 数据库用户名
@@ -30,7 +30,7 @@ dataSourceConfig:
   password: 123456
 packageConfig:
   # 父包名。如果为空，将下面子包名必须写全部， 否则就只需写子包名
-  parent: com.weiller.product
+  parent: com.una.product
   # 父包模块名
 #  moduleName: api
   # Entity包名
@@ -47,12 +47,24 @@ packageConfig:
   controller: controller
   # 路径配置信息
   pathInfo:
-    entity_path: ./src/main/java/com/weiller/product/mybatis/model
-    service_path: ./src/main/java/com/weiller/product/mybatis/service
-    service_impl_path: ./src/main/java/com/weiller/product/mybatis/service/impl
-    mapper_path: ./src/main/java/com/weiller/product/mybatis/mapper
+    entity_path: ./src/main/java/com/una/product/mybatis/model
+    service_path: ./src/main/java/com/una/product/mybatis/service
+    service_impl_path: ./src/main/java/com/una/product/mybatis/service/impl
+    mapper_path: ./src/main/java/com/una/product/mybatis/mapper
     xml_path: ./src/main/resources/mapper
-    controller_path: ./src/main/java/com/weiller/product/controller
+    controller_path: ./src/main/java/com/una/product/controller
+# 自定义模板配置 如果不需要生成的类 就不设置路径 如果要使用默认的路径那么注释掉这边需要生成的类型
+templateConfig:
+#  entity:
+#  service:
+#  serviceImpl:
+#  mapper:
+#  xml:
+#  controller: /templates/controller.java
+# 默认使用vm 需要哪个开启哪个 都不设置默认vm
+useftl: true
+#usebtl: true
+#usevm: true
 strategyConfig:
   # 数据库表映射到实体的命名策略
   naming: underline_to_camel
@@ -78,4 +90,4 @@ strategyConfig:
   entityColumnConstant: true
   # 需要包含的表名，允许正则表达式（与exclude二选一配置)
   include:
-    - user
+    - business_license

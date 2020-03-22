@@ -9,6 +9,7 @@
 	<packaging>maven-plugin</packaging>
 	<name>mybatis-plus-generator-maven-plugin</name>
 	<description>mybatis plus code generator</description>
+	<url>https://github.com/ciweigg/mybatis-plus-generator-maven-plugin</url>
 
 	<licenses>
 		<license>
@@ -23,6 +24,19 @@
 			<email>ciweigg@qq.com</email>
 		</developer>
 	</developers>
+
+	<organization>
+		<name>ciweigg</name>
+		<url>https://github.com/ciweigg</url>
+	</organization>
+
+	<scm>
+		<url>https://github.com/ciweigg/mybatis-plus-generator-maven-plugin</url>
+		<connection>scm:git:https://github.com/ciweigg/mybatis-plus-generator-maven-plugin.git</connection>
+		<developerConnection>scm:git:https://github.com/ciweigg/mybatis-plus-generator-maven-plugin.git
+		</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -60,6 +74,18 @@
 			<groupId>org.freemarker</groupId>
 			<artifactId>freemarker</artifactId>
 			<version>${freemarker.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity-engine-core</artifactId>
+			<version>2.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ibeetl</groupId>
+			<artifactId>beetl</artifactId>
+			<version>3.0.20.RELEASE</version>
 		</dependency>
 
 		<dependency>

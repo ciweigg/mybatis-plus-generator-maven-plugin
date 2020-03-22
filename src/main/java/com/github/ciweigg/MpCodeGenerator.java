@@ -1,8 +1,9 @@
 package com.github.ciweigg;
 
 import com.baomidou.mybatisplus.generator.AutoGenerator;
-import com.baomidou.mybatisplus.generator.config.TemplateConfig;
+import com.baomidou.mybatisplus.generator.engine.BeetlTemplateEngine;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
+import com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine;
 import com.github.ciweigg.config.MpCodeGeneratorConfig;
 import org.apache.commons.lang3.StringUtils;
 import org.yaml.snakeyaml.Yaml;
@@ -42,9 +43,16 @@ public class MpCodeGenerator {
 		mpg.setGlobalConfig(config.getGlobalConfig());
 		mpg.setDataSource(config.getDataSourceConfig());
 		mpg.setPackageInfo(config.getPackageConfig());
-		mpg.setTemplate(new TemplateConfig());
+		mpg.setTemplate(config.getTemplateConfig());
 		mpg.setStrategy(config.getStrategyConfig());
-		mpg.setTemplateEngine(new FreemarkerTemplateEngine());
+		if(config.isUseftl()){
+			mpg.setTemplateEngine(new FreemarkerTemplateEngine());
+		}else if(config.isUsebtl()){
+			mpg.setTemplateEngine(new BeetlTemplateEngine());
+		}else {
+			//默认使用vm
+			mpg.setTemplateEngine(new VelocityTemplateEngine());
+		}
 		return mpg;
 	}
 
