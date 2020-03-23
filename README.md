@@ -61,6 +61,8 @@ globalConfig:
   swagger2: false
   # 是否覆盖已有文件 默认值：false
   fileOverride: true
+  # service 命名方式 默认值：null(生成会带I前缀的接口名) 例如：%sService 生成 UserService
+  serviceName: "%sService"
 dataSourceConfig:
   # 数据库连接地址
   url: jdbc:mysql://127.0.0.1:3309/bl2?useUnicode=true&useSSL=false&characterEncoding=utf8
