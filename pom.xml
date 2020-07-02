@@ -44,7 +44,7 @@
 		<logback.version>1.2.3</logback.version>
 		<lombok.version>1.16.22</lombok.version>
 		<freemarker.version>2.3.30</freemarker.version>
-		<mysql-connector.version>5.1.46</mysql-connector.version>
+		<mysql-connector.version>8.0.16</mysql-connector.version>
 		<snakeyaml.version>1.19</snakeyaml.version>
 		<mybatis-plus.version>3.3.1.tmp</mybatis-plus.version>
 		<maven-plugin-api.version>3.5.0</maven-plugin-api.version>
